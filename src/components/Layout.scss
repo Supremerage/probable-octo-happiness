@@ -1,0 +1,36 @@
+@use "../variables.scss" as var;
+
+.main-content {
+    padding: 0 15%;
+    height: 100%;
+    >.paper {
+        height: 100%;
+        background-color: rgba(217, 217, 217, 0.5);
+    }
+    .content-header {
+        padding: 50px 25px;
+        display: flex;
+        align-items: center;
+        height: 75px;
+        text-align: left;
+        width: 100%;
+        img {
+            border-radius: 4px;
+            margin-right: 20px;
+            height: 100%;
+            width: auto;
+        }
+        h1 {
+            font-size: 4em;
+        }
+    }
+    .content-body {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(var.$tile-width, var.$tile-width));
+        gap: 50px;
+        row-gap: 50px;
+        grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+        justify-content: space-evenly;
+        padding: 50px 25px;
+    }
+}
